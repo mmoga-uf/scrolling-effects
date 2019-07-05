@@ -1,0 +1,23 @@
+{
+  "name": "scrolling-effects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "functions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmoga-uf/scrolling-effects.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmoga-uf/scrolling-effects/issues"
+  },
+  "homepage": "https://github.com/mmoga-uf/scrolling-effects#readme",
+  "dependencies": {
+    "jquery-scrollify": "^1.0.20"
+  }
+}

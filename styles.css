@@ -1,0 +1,199 @@
+/* -------------------------------- Utilities */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+a:link,
+a:visited {
+    color: #666;
+    text-decoration: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+/* -------------------------------- Pagination */
+.pagination {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 20px;
+    height: 90px;
+    margin: auto;
+    font-size: 1.2em;
+    z-index: 10;
+}
+
+.pagination a {
+    display: block;
+    width: 80px;
+    height: 26px;
+    border-radius: 50%;
+
+    color: #aaa;
+    position: relative;
+    padding: 4px;
+}
+
+.pagination a.active:after {
+    background: transparent;
+    border: 1px solid #aaa;
+    width: 8px;
+    height: 8px;
+    right: 0;
+}
+
+.pagination a .hover-text {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+}
+
+.pagination a:hover .hover-text {
+    opacity: 1;
+}
+
+.pagination a:after {
+    width: 4px;
+    height: 4px;
+
+    display: block;
+    background: #aaa;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 4px;
+    bottom: 0;
+
+}
+
+/* -------------------------------------- Panels */
+.panel {
+    width: 100vw;
+    background: hotpink;
+}
+
+.panel:first-of-type {
+    background: lightslategrey;
+}
+
+.panel div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel h2 {
+    border: solid 1vh whitesmoke;
+    padding: 5%;
+    font: bold 20vh sans-serif;
+}
+
+/* ------------------------------------ @keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/*
+ * CSS Page Transitions
+ * Don't forget to add vendor prefixes!
+ */
+
+
+/** Basic styles for an animated element */
+.m-scene .scene_element {
+    animation-duration: 0.25s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+
+}
+
+/** An element that fades in */
+.m-scene .scene_element--fadein {
+    animation-name: fadeIn;
+}
+
+/** An element that fades in and slides up */
+.m-scene .scene_element--fadeinup {
+    animation-name: fadeInUp;
+}
+
+/** An element that fades in and slides from the right */
+.m-scene .scene_element--fadeinright {
+    animation-name: fadeInRight;
+}
+
+/* Reverse "exit" animations */
+.m-scene.is-exiting .scene_element {
+    animation-direction: alternate-reverse;
+}
+
+.m-page {
+    background-color: #eceff1;
+}
+
+@media screen and (min-width: 768px) {
+    .m-detail-layout .m-aside {
+        position: absolute;
+        left: 0;
+        width: 110px;
+    }
+
+    .m-detail-layout .m-aside .aside_title {
+        position: fixed;
+    }
+
+    .m-detail-layout {
+        padding-left: 110px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .m-header {
+        padding: 8.5em 8.5em 4.25em;
+    }
+}
