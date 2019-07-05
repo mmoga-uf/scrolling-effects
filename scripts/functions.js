@@ -18,17 +18,17 @@ $(document).ready(function() {
                 $.scrollify.move($(this).attr('href'));
         });
 });
-
+// smoothState ala https://github.com/miguel-perez/smoothState.js
 $(function() {
-        let $page = $('#main');
-        let options = {
+        const $page = $('#main');
+        const options = {
                 debug: true,
                 prefetch: true,
                 cacheLength: 2,
                 forms: 'form',
                 onStart: {
                         duration: 250, // Duration of our animation
-                        render: function($container) {
+                        render($container) {
                                 // Add your CSS animation reversing class
                                 $container.addClass('is-exiting');
                                 // Restart your animation
@@ -37,7 +37,7 @@ $(function() {
                 },
                 onReady: {
                         duration: 0,
-                        render: function($container, $newContent) {
+                        render($container, $newContent) {
                                 // Remove your CSS animation reversing class
                                 $container.removeClass('is-exiting');
                                 // Inject the new content
@@ -45,5 +45,5 @@ $(function() {
                         },
                 },
         };
-        var smoothState = $page.smoothState(options).data('smoothState');
+        const smoothState = $page.smoothState(options).data('smoothState');
 });

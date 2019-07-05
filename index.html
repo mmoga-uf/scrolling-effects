@@ -10,25 +10,29 @@
 
 <body>
     <div class="m-scene" id="main">
+        <section class="panel home" data-section-name="home">
+            <h2>This can be some kind of header.</h2>
+        </section>
         <ul class="pagination">
-            <li><a href="#test" class="active"><span class="hover-text">Home</span></a></li>
+            <li><a href="#home" class="active"><span class="hover-text">Home</span></a></li>
+            <li><a href="#grid-3" class=""><span class="hover-text">3-Grid</span></a></li>
             <li><a href="#test2" class=""><span class="hover-text">Test 2</span></a></li>
-            <li><a href="#features" class=""><span class="hover-text">Features</span></a></li>
             <li><a href="#ios7" class=""><span class="hover-text">iOS7</span></a></li>
         </ul>
-        <section class="panel test" data-section-name="test">
-            <div class="m-scenez" id="mainz">
-                <div class="m-header scene_element scene_element--fadein">
-                    <h1>Header</h1>
-                </div>
-                <div class="m-page scene_element scene_element--fadeinup">
-                    <div class="m-segment">
-                        <p>
-                            <a href="./detail.html" style="color: black; font-size: 25px;">Link</a>
-                        </p>
-                    </div>
+        <section class="panel test" data-section-name="grid-3">
+
+            <div class="m-header scene_element scene_element--fadein">
+                <h2>This will be a grid section.</h2>
+            </div>
+            <!-- Use .scene_element--fadeinup if you want it to come in from the bottom. This doesn't work so well with Scrollify, however. -->
+            <div class="m-page scene_element scene_element--fadeinupz">
+                <div class="m-segment">
+                    <p>
+                        <a href="./detail.html" style="color: black; font-size: 25px;">Link</a>
+                    </p>
                 </div>
             </div>
+
         </section>
         <section class="panel test2" data-section-name="test2">
             <div>
