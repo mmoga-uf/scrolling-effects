@@ -18,6 +18,7 @@ $(document).ready(function() {
                 $.scrollify.move($(this).attr('href'));
         });
 });
+
 // smoothState ala https://github.com/miguel-perez/smoothState.js
 $(function() {
         const $page = $('#main');
@@ -46,4 +47,10 @@ $(function() {
                 },
         };
         const smoothState = $page.smoothState(options).data('smoothState');
+});
+
+// particles.js
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js', '/scripts/particlesjs-config.json', function() {
+        console.log('callback - particles.js config loaded');
 });

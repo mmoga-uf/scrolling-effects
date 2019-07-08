@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -13,36 +15,112 @@
 
 <body>
     <div class="m-scene" id="main">
-        <section class="panel home" data-section-name="home">
-            <h2>This can be some kind of header.</h2>
-        </section>
-        <section class="panel three-grid" data-section-name="threeGrid">
+        <!-- Cover -->
+        <section id="cover" class="panel cover" data-section-name="Header">
+            <div id="particles-js"></div>
+            <div class="text-ontop">
+                <h2>This can be some kind of header.</h2>
+            </div>
 
-            <div class="m-header scene_element scene_element--fadein">
-                <h2>This will be a grid section.</h2>
+        </section>
+        <!-- 3-grid -->
+        <section id="threeGrid" class="panel three-grid" data-section-name="3-Grid">
+
+            <div class="three-tile scene_element scene_element--fadein">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4 panel-tile" style="background-color: lightblue; height: 60.6%;">
+                            <div>
+                                <div class="img-wrapper-align">
+                                    <img src="https://via.placeholder.com/500" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 panel-tile" style="background-color: lightyellow; height: 60.6%;">
+                            <div>
+                                <div class="img-wrapper-align">
+                                    <img src="https://via.placeholder.com/500" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 panel-tile" style="background-color: lightgreen; height: 60.6%;">
+                            <div>
+                                <div class="img-wrapper-align">
+                                    <img src="https://via.placeholder.com/500" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- Use .scene_element--fadeinup if you want it to come in from the bottom. This doesn't work so well with Scrollify, however. -->
-            <div class="m-page scene_element scene_element--fadeinupz">
-                <div class="m-segment">
+            <!-- <div class="m-page scene_element scene_element--fadeinup"> -->
+
+            <!-- Link to slide page for testing -->
+            <!-- <div class="m-segment">
 
                     <a class="btn" href="./detail.html" style="color: black; font-size: 25px;">Link</a>
 
-                </div>
-            </div>
+                </div> -->
+            <!-- </div> -->
 
+            <!-- 5-grid -->
         </section>
-        <section class="panel five-grid" data-section-name="fiveGrid">
-            <div>
-                <h2>
-                    This will be another grid section.
-                </h2>
+        <section id="fiveGrid" class="panel five-grid" data-section-name="5-Grid">
+            <div class="five-tile">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div>
+                                <div class="img-wrapper-align">
+                                    <img src="https://via.placeholder.com/148" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div>
+                                <div class="img-wrapper-align">
+                                    <img src="https://via.placeholder.com/148" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div>
+                                <div class="img-wrapper-align">
+                                    <img src="https://via.placeholder.com/148" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div>
+                                <div class="img-wrapper-align">
+                                    <img src="https://via.placeholder.com/148" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-md-2">
+                            <div>
+                                <div class="img-wrapper-align">
+                                    <img src="https://via.placeholder.com/148" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div>
+                                <div class="img-wrapper-align">
+                                    <img src="https://via.placeholder.com/148" alt="">
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
             </div>
         </section>
         <ul class="pagination">
-            <li><a href="#home" class="active"><span class="hover-text">Home</span></a></li>
+            <li><a href="#cover" class="active"><span class="hover-text">Cover</span></a></li>
             <li><a href="#threeGrid" class=""><span class="hover-text">3-Grid</span></a></li>
             <li><a href="#fiveGrid" class=""><span class="hover-text">5-Grid</span></a></li>
-            <li><a href="#ios7" class=""><span class="hover-text">iOS7</span></a></li>
+            <li><a href="#ios7" class=""><span class="hover-text">Photos</span></a></li>
         </ul>
     </div>
 
@@ -50,7 +128,9 @@
 
     <script src="/node_modules/jquery-scrollify/jquery.scrollify.js"></script>
     <script src="/scripts/jquery.smoothState.js"></script>
+    <script src="/scripts/particles.js"></script>
     <script src="/scripts/functions.js"></script>
+
 </body>
 
 </html>
