@@ -20,6 +20,18 @@ ul {
     list-style: none;
 }
 
+/* -------------------------------- Buttons */
+.btn {
+    display: flex;
+    justify-content: center;
+    background: whitesmoke;
+    border: 0;
+    border-radius: 5px;
+    height: 50px;
+    width: 100px;
+    line-height: 50px;
+}
+
 /* -------------------------------- Pagination */
 .pagination {
     position: fixed;
@@ -67,7 +79,6 @@ ul {
 .pagination a:after {
     width: 4px;
     height: 4px;
-
     display: block;
     background: #aaa;
     border-radius: 50%;
@@ -75,15 +86,17 @@ ul {
     position: absolute;
     margin: auto;
     top: 0;
-    right: 4px;
+    right: 3px;
     bottom: 0;
 
 }
 
 /* -------------------------------------- Panels */
 .panel {
+    height: 100%;
     height: 100vh;
-    width: 100vw;
+    min-height: 600px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -94,11 +107,11 @@ ul {
     background-color: hotpink;
 }
 
-.panel.test {
+.panel.three-grid {
     background-color: royalblue;
 }
 
-.panel.test2 {
+.panel.five-grid {
     background-color: #666;
 }
 
@@ -108,6 +121,7 @@ ul {
 
 .panel h2 {
     border: solid 1vh whitesmoke;
+    border-radius: 5px;
     padding: 5%;
     margin: 0;
     font: bold 10vh sans-serif;
@@ -182,8 +196,13 @@ ul {
     animation-direction: alternate-reverse;
 }
 
-.m-page {
+/* .m-page {
     background-color: #eceff1;
+} */
+
+.m-segment {
+    display: flex;
+    justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
